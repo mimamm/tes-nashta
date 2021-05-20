@@ -1,0 +1,39 @@
+CREATE DATABASE tes_nashta
+
+\c tes_nashta
+
+CREATE TYPE role AS ENUM ('mahasiswa', 'dosen')
+
+CREATE TABLE "user" (
+	id serial PRIMARY KEY,
+	email VARCHAR(50) NOT NULL,
+	password VARCHAR(50) NOT NULL,
+	role role NOT NULL
+)
+
+CREATE TABLE mahasiswa (
+	nim VARCHAR(50) PRIMARY KEY NOT NULL,
+	nama VARCHAR(50) NOT NULL,
+	alamat VARCHAR(50) NOT NULL,
+	tanggal_lahir DATE NOT NULL,
+	jurusan VARCHAR(50) NOT NULL
+)
+
+CREATE TABLE dosen (
+	id serial PRIMARY KEY,
+	nama VARCHAR(50) NOT NULL
+)
+
+CREATE TABLE mata_kuliah (
+	id serial PRIMARY KEY,
+	nama_mata_kuliah VARCHAR(50) NOT NULL,
+	nim INTEGER REFERENCES mahasiswa(nim)
+)
+
+CREATE TABLE data_nilai (
+	nim VARCHAR(50) REFERENCES mahasiswa(nim) PRIMARY KEY NOT NULL,
+	id_mata_kuliah REFERENCES mata_kuliah(id) PRIMARY KEY NOT NULL,
+	id_dosen REFERENCES dosen(id) NOT NULL,
+	nilai INTEGER NOT NULL,
+	keterangan VARCHAR(50)
+)

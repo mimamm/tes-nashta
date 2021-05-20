@@ -1,0 +1,24 @@
+INSERT INTO "user" VALUES (2, 'rio@gmail.com', '12345', 'dosen');
+INSERT INTO "user" VALUES (1, 'imam@gmail.com', '12345', 'mahasiswa');
+
+INSERT INTO "mahasiswa" VALUES (1507509, 'Muhammad Imam M', 'Jl Sriwijaya 1 No.C19', '1999-07-22', 'Pendidikan Ilmu Komputer');
+INSERT INTO "mahasiswa" VALUES (1504414, 'Alfi Inayati', 'Bojongnangka, Kertahayu, Pamarican', '1997-07-03', 'Pendidikan Ilmu Komputer');
+INSERT INTO "mahasiswa" VALUES (1507553, 'Vivaldy Andhira S', 'Apartemen Gateway Cicadas', '1997-12-31', 'Pendidikan Ilmu Komputer');
+
+INSERT INTO "dosen" VALUES (2, 'Zioda Moranta Irianto S.Kom.');
+INSERT INTO "dosen" VALUES (1, 'Rio Rezky Yudiana S.Pd.');
+INSERT INTO "dosen" VALUES (3, 'Hanifsyah Solehudin Nazir');
+
+INSERT INTO "mata_kuliah" VALUES (1, 'Algoritma Pemrograman', 1507509);
+INSERT INTO "mata_kuliah" VALUES (2, 'Desain Web', 1504414);
+INSERT INTO "mata_kuliah" VALUES (3, 'Jaringan Komputer', 1507509);
+
+INSERT INTO "data_nilai" VALUES (1504414, 1, 1, 100, 'mantap pertahankan');
+INSERT INTO "data_nilai" VALUES (1507553, 1, 1, 50, 'harus ditingkatkan ya');
+INSERT INTO "data_nilai" VALUES (1507509, 1, 1, 90, 'pertahankan dan tingkatkan kalau bisa ya');
+INSERT INTO "data_nilai" VALUES (1504414, 2, 2, 55, 'tingkatkan!');
+INSERT INTO "data_nilai" VALUES (1507553, 2, 2, 69, 'semangat tingkatkan');
+INSERT INTO "data_nilai" VALUES (1507509, 2, 2, 71, 'harus ditingkatkan');
+INSERT INTO "data_nilai" VALUES (1507509, 3, 3, 65, 'tingkatkan');
+INSERT INTO "data_nilai" VALUES (1507553, 3, 3, 60, 'tingkatkan');
+INSERT INTO "data_nilai" VALUES (1504414, 3, 3, 70, 'tingkatkan');
