@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "3a23bb52-5af5-410d-a03b-9bc35da2c287",
+		"name": "Tes NashTa",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create data_nilai",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nim\": 1504414,\r\n    \"id_mata_kuliah\": 3,\r\n    \"id_dosen\": 3,\r\n    \"nilai\": 50,\r\n    \"keterangan\": \"tingkatkan\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/data_nilai/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"data_nilai",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete data_nilai",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/data_nilai/delete/1504414/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"data_nilai",
+						"delete",
+						"1504414",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update data_nilai",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_dosen\": 3,\r\n    \"nilai\": 60,\r\n    \"keterangan\": \"tingkatkan\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/data_nilai/update/1504414/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"data_nilai",
+						"update",
+						"1504414",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
